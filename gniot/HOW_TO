@@ -1,0 +1,46 @@
+1. What is pip:
+    https://en.wikipedia.org/wiki/Pip_(package_manager)
+2. Install pip:
+    sudo apt-get install python-pip
+3. What is virtualenv
+    https://virtualenv.pypa.io/
+4. Install VirtualEnv : 
+    sudo pip install virtualenv
+5. Create a virtualenv :
+    virtualenv venv 
+6. Activate virtualenv:
+    source venv/bin/activate
+7. Install django
+    pip install django
+8. create django app
+    django-admin.py startproject PROJECT_NAME
+9. change the directory to project root
+    cd PROJECT_NAME
+10. Create database
+    python manage.py migrate
+    
+    The above command will create a file named db.sqlite3 at the project_root, ie. the directory you are in
+    
+11. create a new app
+    python manage.py startapp APP_NAME
+
+12. Open settings : 
+    gedit PROJECT_NAME/settings.py
+13. Add the app to settings
+    INSTALLED_APPS += ['APP_NAME']
+13. Create a new model in the app
+14. Create migrations        
+    python manage.py makemigrations
+15. Now migrate
+    python manage.py migrate
+16. Add the model to the admin
+    OPEN THE FILE : gedit APP_NAME/admin.py
+        now import the model
+        from . import MODEL_NAME
+        admin.site.register(MODEL_NAME)
+
+
+    
+    
+     
+
